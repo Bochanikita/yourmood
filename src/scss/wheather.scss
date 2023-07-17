@@ -1,0 +1,33 @@
+.wheather {
+  width: 250px;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.50);
+  border-radius: 40px;
+}
+.wheather__image {
+  opacity: 1;
+}
+.wheather__tempreture {
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+
+  margin: 0;
+  display: inline-block;
+}
+.sign {
+}
+.wheather__celsius {
+  opacity: 0.5;
+}

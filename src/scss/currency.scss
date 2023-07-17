@@ -1,0 +1,32 @@
+.currency {
+  width: 250px;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.50);
+  border-radius: 40px;
+  align-self: start;
+  justify-self: end;
+}
+.currency__usd {
+  color: rgba(255, 255, 255, 0.50);
+text-align: center;
+font-family: Verdana;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 20px */
+}
+.currency__eur {
+  color: rgba(255, 255, 255, 0.50);
+text-align: center;
+font-family: Verdana;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 20px */
+}

@@ -4,7 +4,7 @@ export default function realDate() {
   let month = date.getMonth() + 1;
   const year = date.getFullYear();
 
-  day = (`0${date}`).slice(-2);
+  day = (`0${day}`).slice(-2);
   month = (`0${month}`).slice(-2);
 
   const dispdate = document.querySelector('.realtime__date');

@@ -1,0 +1,25 @@
+.links {
+  width: 250px;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.50);
+  border-radius: 40px;
+  align-self: end;
+  justify-self: start;
+}
+.links__list {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+.links__item {
+}
+.links__link {
+}

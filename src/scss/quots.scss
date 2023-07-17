@@ -1,0 +1,26 @@
+.quots {
+  width: 500px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.50);
+  border-radius: 40px;
+
+  align-self: end;
+}
+
+.quots__text {
+  color: white;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 20px */
+
+  margin: 0;
+  padding: 0;
+}
