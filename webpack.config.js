@@ -10,45 +10,44 @@ const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
 module.exports = {
-    mode,
-    target,
-    devtool,
-    entry: path.resolve(__dirname, 'src/js', 'script.js'),
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      clean: true,
-      filename: 'main.js',
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src', 'index.html')
-        }),
-        new MiniCssExtractPlugin({
-          filename: 'style.css'
-        })
-    ],
-    module: {
-        rules: [
+  mode,
+  target,
+  devtool,
+  entry: path.resolve(__dirname, 'src/js', 'script.js'),
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+    filename: 'main.js',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'index.html')
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    })
+  ],
+  module: {
+    rules: [{
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
+        test: /\.(c|sa|sc)ss$/i,
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
           {
-            test: /\.html$/i,
-            loader: "html-loader",
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [require('postcss-preset-env')],
+              }
+            }
           },
-          {
-            test: /\.(c|sa|sc)ss$/i,
-            use: [
-              devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-              "css-loader",
-              {
-                loader: 'postcss-loader',
-                options: {
-                  postcssOptions: {
-                    plugins: [require('postcss-preset-env')],
-                  }
-                }
-              },
-              "sass-loader"
-            ],
-          },
+          "sass-loader"
         ],
       },
-  };
+    ],
+  },
+};

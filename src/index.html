@@ -9,11 +9,18 @@
 <body class="page__body">
     <div class="content">
             <section class="wheather">
-                <img class="wheather__image" src="/src/img/wheather/partly-cloudy-day.svg" alt="" width="70px">
-                <div class="wheather__temp-block">
-                    <p class="wheather__tempreture"><span class="sign">+</span>24</p>
-                    <img class="wheather__celsius" src="/src/img/wheather/celsius.svg" alt="">
+                <div class="wheather__search">
+                    <input class="wheather__input" type="text" placeholder="enter city name">
+                    <button class="wheather__button">Search</button>
                 </div>
+                <div class="wheather__block">
+                    <img class="wheather__image" src="/src/img/wheather/partly-cloudy-day.svg" alt="" width="70px">
+                    <div class="wheather__temp-block">
+                        <p class="wheather__tempreture">24</p>
+                        <img class="wheather__celsius" src="/src/img/wheather/celsius.svg" alt="">
+                    </div>
+                </div>
+                <h2 class="wheather__city">Moscow</h2>
             </section>
             <section class="realtime">
                 <div class="realtime__time">10:20</div>
@@ -52,9 +59,9 @@
             </section>
             <section class="timer">
                 <div class="timer__mode">
-                    <p class="timer__work timer__work_active">work</p>
+                    <p class="timer__work">work</p>
                     <p class="timer__line"></p>
-                    <p class="timer__work">rest</p>
+                    <p class="timer__rest">rest</p>
                 </div>
                 <div class="timer__indication">
                     <p class="timer__time">24:35</p>
@@ -66,11 +73,11 @@
                             </button>
                         </li>
                         <li class="timer__item">
-                            <button class="timer__btn timer__btn_pause">
+                            <button disabled class="timer__btn timer__btn_pause">
                             </button>
                         </li>
                         <li class="timer__item">
-                            <button class="timer__btn timer__btn_revert">
+                            <button class="timer__btn timer__btn_revert" value="Refresh Page" onClick="window.location.reload();">
                             </button>
                         </li>
                     </ul>

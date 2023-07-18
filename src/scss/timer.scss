@@ -24,7 +24,8 @@
   border: 3px solid rgba(255, 255, 255, 0.50);
 }
 
-.timer__work {
+.timer__work,
+.timer__rest {
   color: rgba(255, 255, 255, 0.50);
   font-family: Verdana;
   font-size: 20px;
@@ -48,6 +49,10 @@
 }
 
 .timer__work_active {
+  color: white;
+  font-weight: 700;
+}
+.timer__rest_active {
   color: white;
   font-weight: 700;
 }

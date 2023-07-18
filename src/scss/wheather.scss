@@ -1,14 +1,35 @@
 .wheather {
   width: 250px;
-  height: 120px;
+  height: 180px;
 
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 
   background-color: rgba(0, 0, 0, 0.50);
   border-radius: 40px;
+}
+.wheather__input {
+  width: 130px;
+  background-color: rgb(209, 209, 209);
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+.wheather__button {
+  background-color: grey;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Verdana;
+  transition: 0.3s;
+}
+.wheather__button:hover {
+  background-color: rgb(206, 206, 206);
+}
+.wheather__block {
+  display: flex;
+
 }
 .wheather__image {
   opacity: 1;
@@ -30,4 +51,14 @@
 }
 .wheather__celsius {
   opacity: 0.5;
+}
+.wheather__city {
+  color: #FFF;
+font-family: Verdana;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 20px */
+margin: 0;
+padding: 0;
 }
