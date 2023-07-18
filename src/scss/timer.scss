@@ -4,7 +4,7 @@
 
   display: flex;
   justify-content: space-evenly;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 
   background-color: rgba(0, 0, 0, 0.50);
@@ -12,21 +12,116 @@
   align-self: end;
   justify-self: end;
 }
+
 .timer__mode {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.50);
 }
+
 .timer__work {
+  color: rgba(255, 255, 255, 0.50);
+  font-family: Verdana;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 20px */
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
 }
+
 .timer__line {
+  position: absolute;
+  top: -14px;
+  left: 107px;
+
+  width: 3px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.50);
 }
-.timer__rest {
+
+.timer__work_active {
+  color: white;
+  font-weight: 700;
 }
+
 .timer__indication {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #FF8A00;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
+
 .timer__time {
+  color: #FFF;
+  font-family: Verdana;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  /* 64px */
+  margin: 0;
+  padding: 0;
 }
+
 .timer__control {
+  width: 200px;
+  height: 50px;
 }
+
 .timer__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
+
 .timer__item {
+  width: 24px;
+  height: 24px;
+}
+
+.timer__btn {
+  background-color: rgba(255, 255, 255, 0.0);
+  color: black;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  opacity: 0.3;
+}
+
+.timer__btn:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.timer__btn:active {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.timer__btn_play::after {
+  content: url(/src/img/timer/start_timer_hover.svg);
+}
+
+.timer__btn_pause::after {
+  content: url(/src/img/timer/pause_hover.svg);
+}
+
+.timer__btn_revert::after {
+  content: url(/src/img/timer/revert_hover.svg);
 }
