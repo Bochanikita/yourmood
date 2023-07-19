@@ -29,25 +29,24 @@ module.exports = {
   ],
   module: {
     rules: [{
-        test: /\.html$/i,
-        loader: "html-loader",
-      },
-      {
-        test: /\.(c|sa|sc)ss$/i,
-        use: [
-          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          "css-loader",
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [require('postcss-preset-env')],
-              }
-            }
+      test: /\.html$/i,
+      loader: "html-loader",
+    }, {
+      test: /\.(c|sa|sc)ss$/i,
+      use: [
+        devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+        "css-loader",
+        {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [require('postcss-preset-env')],
+            },
           },
-          "sass-loader"
-        ],
-      },
+        },
+        'sass-loader',
+      ],
+    },
     ],
   },
 };

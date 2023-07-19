@@ -17,14 +17,14 @@ export default function wheather() {
       const data = await response.json();
 
       citywheather.innerHTML = data.name;
-      document.querySelector('.wheather__tempreture').innerHTML = data.main.temp;
+      document.querySelector('.wheather__tempreture').innerHTML = Math.round(data.main.temp);
 
       if (data.weather[0].main === 'Clouds') {
-        wheathericon.src = '/img/wheather/cloudy.svg';
+        wheathericon.src = 'img/wheather/cloudy.svg';
       } else if (data.weather[0].main === 'Clear') {
-        wheathericon.src = '/img/wheather/clear-day.svg';
+        wheathericon.src = 'img/wheather/clear-day.svg';
       } else if (data.weather[0].main === 'Rain') {
-        wheathericon.src = '/src/img/wheather/rain.svg';
+        wheathericon.src = 'img/wheather/rain.svg';
       } else if (data.weather[0].main === 'Drizzle') {
         wheathericon.src = '/src/img/wheather/drizzle.svg';
       } else if (data.weather[0].main === 'Mist') {

@@ -72,14 +72,17 @@ export default function timer() {
 
   function Start() {
     btnplay.classList.remove('timer__btn_play');
-    btnplay.classList.add('timer__btn_pause');
+    // btnplay.classList.add('timer__btn_pause');
     btnplay.style.display = 'none';
     btnpause.removeAttribute('disabled', '');
     startTimer();
   }
   function Pause() {
-    btnpause.classList.toggle('timer__btn_play');
-    btnpause.classList.toggle('timer__btn_pause');
+    if (btnpause.classList.contains('timer__btn_pause')) {
+      btnpause.classList.remove('timer__btn_play');
+    } else {
+      btnpause.classList.add('timer__btn_play');
+    }
     if (!isPaused) {
       isPaused = true;
     } else {
