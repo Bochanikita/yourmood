@@ -79,6 +79,11 @@ export default function timer() {
   }
   function Pause() {
     if (btnpause.classList.contains('timer__btn_pause')) {
+      btnpause.classList.remove('timer__btn_pause');
+    } else {
+      btnpause.classList.add('timer__btn_pause');
+    }
+    if (btnpause.classList.contains('timer__btn_play')) {
       btnpause.classList.remove('timer__btn_play');
     } else {
       btnpause.classList.add('timer__btn_play');
